@@ -1,1 +1,16 @@
+.tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 
+.container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
