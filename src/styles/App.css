@@ -1,16 +1,23 @@
 .tooltiptext {
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.container:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    background-color: red;
+    color: white;
     width: 100px;
     height: 50px;
     padding: 5px;
-    color: white;
-    background-color: red;
     border-radius: 10px;
 }
+
+.container .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+  position: relative; /* This is important to position the tooltip relative to the container */
+  margin-bottom: 40px;
+}
+

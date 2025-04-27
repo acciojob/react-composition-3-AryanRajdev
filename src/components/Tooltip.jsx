@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Tooltip = ({text,children}) => {
+
+   const [show,setShow] = useState(false);
+
+   function handleMouseEnter(){
+    setShow(true);
+   }
+
+   function handleMouseLeave(){
+    setShow(false);
+   }
+
   return (
     <div className='container'>
-      <div className='tooltiptext'>{text}</div>
-      <h1 className='tooltip'>{children}</h1>
+      <h1 className='tooltip' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{children}</h1>
+      {show && <div className='tooltiptext'>{text}</div>} 
     </div>
   )
 }
