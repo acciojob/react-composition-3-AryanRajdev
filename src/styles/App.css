@@ -19,6 +19,6 @@
 
 .container {
   position: relative; /* This is important to position the tooltip relative to the container */
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
